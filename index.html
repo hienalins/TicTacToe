@@ -1,0 +1,245 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="gauto | Car Rental HTML Template from Themescare">
+		<meta name="keyword" content="taxi,car,rent,hire,transport">
+		<meta name="author" content="Enã Lins">
+		
+    <title>Jogo da Velha</title>
+		<!-- BOOTSTRAP -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {background-color: #777;}
+      button {
+        height: 120px;
+        width: 120px;
+        background-color: #FFF;
+        color: #222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 70px;
+        border-radius: 15px;
+        margin: 15px 0 15px auto;
+      }
+      button:hover {
+        background-color: #eaeaea;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        color: #333;
+      }
+      .bg-white {background-color: #FFF;}
+      .marker{
+        width: 100%;
+        height: 150px;
+        padding: 15px;
+        text-align: center;
+      }
+      .marker:hover{
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+      }
+      .col-lg-4 {padding: 15px}
+    </style>
+  </head>
+  <body>
+    
+    
+
+    <!-- Main content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <h2 style="color: #FFF; border-bottom: 3px solid #fff;text-transform: uppercase; letter-spacing: 2px; text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); margin-top: 20px; padding-bottom: 20px;">
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-circle fa-w-16" style="height: 23px;margin-bottom: -1px;"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z" class=""></path></svg>
+            Jogo da velha 
+            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10 fa-2x" style="height: 30px;margin-bottom: -5px;"><path fill="#FFFFFF" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></h2>
+        </div>
+        <div class="col-lg-3">
+          <button type="button" onclick="location.reload()">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sync-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-sync-alt fa-w-16" style="height: 70px;"><path fill="#222222" d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z" class=""></path></svg>
+          </button>
+          <button type="button" onclick="alert('Desenvolvido por Enã Lins utilizando Bootstrap e Jquery')">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-h" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-ellipsis-h fa-w-16" style="height: 70px;"><path fill="#222222" d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z" class=""></path></svg>
+          </button>
+        </div>
+        <div class="col-lg-9">
+          <section style="display: none; cursor: wait; position: fixed; width: 100%; height: 100%; z-index: 9999;" id="waitBox"></section>
+          <section class="container" style="width: 70%;">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="marker bg-white" onclick="jogada(this)" id="1x1"></div>
+              </div>
+              <div class="col-lg-4">
+                <div class="marker bg-white" onclick="jogada(this)" id="1x2"></div>
+              </div>
+              <div class="col-lg-4">
+                <div class="marker bg-white" onclick="jogada(this)" id="1x3"></div>
+              </div>      
+              <div class="col-lg-4">
+                <div class="marker bg-white" onclick="jogada(this)" id="2x1"></div>
+              </div>
+              <div class="col-lg-4">
+                <div class="marker bg-white" onclick="jogada(this)" id="2x2"></div>
+              </div>
+              <div class="col-lg-4">
+                <div class="marker bg-white" onclick="jogada(this)" id="2x3"></div>
+              </div>
+              <div class="col-lg-4">
+                <div class="marker bg-white" onclick="jogada(this)" id="3x1"></div>
+              </div>
+              <div class="col-lg-4">
+                <div class="marker bg-white" onclick="jogada(this)" id="3x2"></div>
+              </div>
+              <div class="col-lg-4">
+                <div class="marker bg-white" onclick="jogada(this)" id="3x3"></div>
+              </div>
+            </div>
+          </section>
+        </div>  
+      </div>
+    </div>
+    <footer>
+      <!-- JQUERY -->
+      <script src="assets/js/jquery.min.js"></script>
+      <!-- BOOTSTRAP -->
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script>
+        let circle = '<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-circle fa-w-16" style="height: 100% ;margin-bottom: -1px;"><path fill="#222222" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z" class=""></path></svg>';
+
+        let times = '<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10 fa-2x" style="height: 100% ;margin-bottom: -5px;"><path fill="#222222" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg>';
+        
+        // Tebuleiro do jogo
+        let tabuleiro = [];
+        // Jogadas possíveis
+        let possiveis = ['1x1', '1x2', '1x3', '2x1', '2x2', '2x3', '3x1', '3x2', '3x3'];
+        // Conjuntos de jogadas que define uma vitória
+        let vitorias = [{a: '1x1', b: '1x2', c: '1x3'}, {a: '2x1', b: '2x2', c: '2x3'}, {a: '3x1', b: '3x2', c: '3x3'}, {a: '1x1', b: '2x1', c: '3x1'}, {a: '1x2', b: '2x2', c: '3x2'}, {a: '1x3', b: '2x3', c: '3x3'}, {a: '1x1', b: '2x2', c: '3x3'}, {a: '1x3', b: '2x2', c: '3x1'}];
+
+        // Checa se a jogada é válida
+        function check(x){
+          if(possiveis.includes(x) == true){
+            return true;
+          }else{
+            return false;
+          }
+        }
+
+        // Jogada do humano
+        function jogada(x){
+          let ID = $(x).attr('id');
+          if(check(ID)){
+            $(x).html(times);
+            tabuleiro.push({move: ID, player: 'human'});
+            possiveis.splice(possiveis.indexOf(ID), 1);
+            $('#waitBox').css('display', 'block');
+            if(win('human')){
+              alert('Fim de Jogo - Você venceu!');
+            }else{
+              setTimeout(function(){
+                // Jogada do robo
+                let move = choice();
+                let ID = '#' + move;
+                $(ID).html(circle);
+                tabuleiro.push({move: move, player: 'robot'});
+                possiveis.splice(possiveis.indexOf(move), 1);
+                if(win('robot')){
+                  alert('Fim de Jogo - Você perdeu! Vitória das maquinas!');
+                }else{
+                  $('#waitBox').css('display', 'none');
+                }
+              }, 1000);
+            }
+          }
+        }
+
+        // Checagem de vitória
+        function win(x){
+          let len = vitorias.length;
+
+          for(i = 0; i < len; i++){
+            let teste1 = tabuleiro.some(tabuleiro => tabuleiro.move == vitorias[i].a && tabuleiro.player == x);
+            let teste2 = tabuleiro.some(tabuleiro => tabuleiro.move == vitorias[i].b && tabuleiro.player == x);
+            let teste3 = tabuleiro.some(tabuleiro => tabuleiro.move == vitorias[i].c && tabuleiro.player == x);
+
+            if(teste1 === true && teste2 === true && teste3 === true){
+              return true;
+            }
+          }
+        }
+
+        // Define a jogada ideal para a maquina
+        function choice(){
+          
+          // Função para checar se a máquina está prestes a vencer, caso sim ela ignora o resto do tabuleiro e faz a jogada vitoriosa
+          function victory(){
+            let len = vitorias.length;
+
+            for(i = 0; i < len; i++){
+              let teste1 = tabuleiro.some(tabuleiro => tabuleiro.move == vitorias[i].a && tabuleiro.player == 'robot');
+              let teste2 = tabuleiro.some(tabuleiro => tabuleiro.move == vitorias[i].b && tabuleiro.player == 'robot');
+              let teste3 = tabuleiro.some(tabuleiro => tabuleiro.move == vitorias[i].c && tabuleiro.player == 'robot');
+
+              if(teste1 === true && teste2 === true && check(vitorias[i].c) == true){
+                let victorious = vitorias[i].c;
+                i = len;
+                return victorious;
+              }else if(teste1 === true && teste3 === true && check(vitorias[i].b) == true){
+                let victorious = vitorias[i].b;
+                i = len;
+                return victorious;
+              }else if(teste2 === true && teste3 === true && check(vitorias[i].a) == true){
+                let victorious = vitorias[i].a;
+                i = len;
+                return victorious;
+              }else{
+                let victorious = undefined;
+              }
+            }
+          }
+
+          // Função para checar se o humano está prestes a vencer e define a jogada da máquina como uma jogada que interrompa essa vitória
+          function lose(){
+            let len = vitorias.length;
+
+            for(i = 0; i < len; i++){
+              let teste1 = tabuleiro.some(tabuleiro => tabuleiro.move == vitorias[i].a && tabuleiro.player == 'human');
+              let teste2 = tabuleiro.some(tabuleiro => tabuleiro.move == vitorias[i].b && tabuleiro.player == 'human');
+              let teste3 = tabuleiro.some(tabuleiro => tabuleiro.move == vitorias[i].c && tabuleiro.player == 'human');
+
+              if(teste1 === true && teste2 === true && check(vitorias[i].c) === true){
+                let loser = vitorias[i].c;
+                i = len;
+                return loser;
+              }else if(teste1 === true && teste3 === true && check(vitorias[i].b) === true){
+                let loser = vitorias[i].b;
+                i = len;
+                return loser;
+              }else if(teste2 === true && teste3 === true && check(vitorias[i].a) === true){
+                let loser = vitorias[i].a;
+                i = len;
+                return loser;
+              }else{
+                let loser = undefined;
+              }
+            }
+          }
+
+          let venceu = victory();
+          let perdeu = lose(); 
+
+          if(venceu != undefined){
+            return venceu;
+          }else if(perdeu != undefined){
+            return perdeu
+          }else{
+            // Caso ninguém esteja com uma jogada montada, ele escolhe uma posição aleatória do tabuleiro para jogar
+            let max = possiveis.length;
+            let myMove = Math.floor(Math.random() * max);
+            return possiveis[myMove];
+          }
+        }
+      </script>
+    </footer>
+  </body>
+</html>
