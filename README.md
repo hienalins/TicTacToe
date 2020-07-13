@@ -6,7 +6,6 @@ The game is a 3 by 3 board that you need to make a row to win, you always starts
 My to do list consists of:
 
 1- Make a better layout;
-2- Remove Jquery and use just vanilla Javascript; /* i used jquery to make it faster since i'm already used to it */
-3- Use a button to "flip a coin" to determine who starts playing;
-4- Make a winner chart;
-5- Use node.js to save the games on a database to use it as a reference of the best move to make;
+2- Use a button to "flip a coin" to determine who starts playing;
+3- Make a winner chart;
+4- Use node.js to save the games on a database to use it as a reference of the best move to make;
